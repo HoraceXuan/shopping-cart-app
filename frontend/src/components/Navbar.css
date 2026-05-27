@@ -1,0 +1,142 @@
+.navbar {
+  width: 100%;
+  height: 64px;
+  padding: 0 56px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 180px 1fr 100px;
+  align-items: center;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-logo {
+  font-size: 28px !important;
+  font-weight: 800;
+  color: #1e293b;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+}
+
+.navbar-links a,
+.navbar-auth a {
+  font-size: 16px !important;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.navbar-auth {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-links a:hover,
+.navbar-auth a:hover {
+  color: #2563eb;
+}
+
+.cart-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-count-badge {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 7px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+
+  animation: cartBadgePop 0.25s ease;
+}
+
+@keyframes cartBadgePop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 24px;
+    grid-template-columns: 140px 1fr 70px;
+  }
+
+  .navbar-links {
+    gap: 22px;
+  }
+
+  .navbar-logo {
+    font-size: 24px !important;
+  }
+
+  .navbar-links a,
+  .navbar-auth a {
+    font-size: 14px !important;
+  }
+}
+.navbar-user {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.logout-btn {
+  border: none;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 9px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #fecaca;
+}
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
